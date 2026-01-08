@@ -3,79 +3,247 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>د. محجوب الكدكري - استشاري جراحة العظام واستبدال المفاصل</title>
-<link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
+<title>د. محجوب الكدكري | استشاري جراحة العظام</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
 <style>
-    body { font-family: 'Cairo', sans-serif; margin:0; padding:0; background:#fdfdfd; color:#333;}
-    header { background:#004aad; color:#fff; padding:20px; text-align:center;}
-    header h1 { margin:0; font-size:2em;}
-    nav { background:#0b3d91; display:flex; justify-content:center;}
-    nav a { color:#fff; text-decoration:none; padding:15px 20px; transition:0.3s;}
-    nav a:hover { background:#062f6a;}
-    section { padding:40px 20px; max-width:1000px; margin:auto;}
-    h2 { color:#004aad; margin-bottom:15px;}
-    .about, .services, .contact { background:#f5f5f5; border-radius:10px; padding:20px; margin-bottom:30px;}
-    .contact form { display:flex; flex-direction:column;}
-    .contact input, .contact textarea, .contact button { padding:10px; margin-bottom:10px; border-radius:5px; border:1px solid #ccc;}
-    .contact button { background:#004aad; color:#fff; border:none; cursor:pointer; transition:0.3s;}
-    .contact button:hover { background:#062f6a;}
-    footer { background:#004aad; color:#fff; text-align:center; padding:15px;}
-    img.profile { max-width:200px; border-radius:50%; display:block; margin:20px auto;}
-    .flash { padding:10px; margin-bottom:10px; border-radius:5px;}
-    .flash.success { background:#d4edda; color:#155724;}
-    .flash.error { background:#f8d7da; color:#721c24;}
+*{box-sizing:border-box}
+body{
+    margin:0;
+    font-family:'Cairo',sans-serif;
+    background:#f6f6f6;
+    color:#333;
+}
+
+/* ===== الشريط العلوي ===== */
+.top-bar{
+    background:#0b6b3a;
+    color:#fff;
+    font-size:13px;
+    padding:6px 20px;
+}
+.top-bar .inner{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+}
+.top-bar span{margin-left:15px}
+
+/* ===== الهيدر ===== */
+header{
+    background:#fff;
+    border-bottom:3px solid #0b6b3a;
+}
+.header-inner{
+    max-width:1200px;
+    margin:auto;
+    padding:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.logo{
+    font-size:22px;
+    font-weight:700;
+    color:#0b6b3a;
+}
+nav a{
+    text-decoration:none;
+    margin:0 12px;
+    font-weight:600;
+    color:#333;
+}
+nav a:hover{color:#0b6b3a}
+
+/* ===== المحتوى ===== */
+.container{
+    max-width:1200px;
+    margin:40px auto;
+    padding:0 20px;
+}
+.main-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:30px;
+}
+.card{
+    background:#fff;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,.05);
+    margin-bottom:30px;
+}
+h2{color:#0b6b3a}
+
+/* صورة الدكتور */
+.doctor-img{
+    width:100%;
+    border-radius:10px;
+}
+
+/* ===== الفورم ===== */
+input,textarea,button{
+    width:100%;
+    padding:12px;
+    margin-bottom:12px;
+    border-radius:6px;
+    border:1px solid #ccc;
+    font-family:'Cairo',sans-serif;
+}
+button{
+    background:#0b6b3a;
+    color:#fff;
+    border:none;
+    cursor:pointer;
+}
+button:hover{background:#095c32}
+
+/* ===== الفوتر (مثل ساهم) ===== */
+footer{
+    background:#062f23;
+    color:#fff;
+    margin-top:60px;
+}
+.footer-inner{
+    max-width:1200px;
+    margin:auto;
+    padding:40px 20px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:30px;
+}
+footer h4{
+    margin-bottom:15px;
+    color:#9fe3c2;
+}
+footer a{
+    display:block;
+    color:#ddd;
+    text-decoration:none;
+    margin-bottom:8px;
+    font-size:14px;
+}
+footer a:hover{color:#fff}
+
+.footer-bottom{
+    background:#044d32;
+    text-align:center;
+    padding:12px;
+    font-size:13px;
+}
 </style>
 </head>
+
 <body>
 
+<!-- الشريط العلوي -->
+<div class="top-bar">
+    <div class="inner">
+        <div>📞 966-XXX-XXXX | ✉ info@mahjoubortho.com</div>
+        <div>استشاري جراحة العظام واستبدال المفاصل</div>
+    </div>
+</div>
+
+<!-- الهيدر -->
 <header>
-    <h1>د. محجوب الكدكري</h1>
-    <p>استشاري جراحة العظام واستبدال المفاصل</p>
+    <div class="header-inner">
+        <div class="logo">د. محجوب الكدكري</div>
+        <nav>
+            <a href="#">الرئيسية</a>
+            <a href="#">عن الدكتور</a>
+            <a href="#">الخدمات</a>
+            <a href="#">المقالات</a>
+            <a href="#">تواصل</a>
+        </nav>
+    </div>
 </header>
 
-<nav>
-    <a href="#about">عن الدكتور</a>
-    <a href="#services">الخدمات</a>
-    <a href="#contact">تواصل معنا</a>
-</nav>
+<!-- المحتوى -->
+<div class="container">
+    <div class="main-grid">
 
-<section id="about" class="about">
-    <h2>عن الدكتور</h2>
-    <img src="profile.jpg" alt="صورة الدكتور" class="profile">
-    <p>د. محجوب الكدكري، استشاري جراحة العظام واستبدال المفاصل، يتميز بخبرة طويلة في علاج مشاكل المفاصل وإجراء العمليات الجراحية الدقيقة لاستعادة الحركة وتحسين جودة الحياة للمرضى.</p>
-</section>
+        <!-- المحتوى -->
+        <div>
+            <div class="card">
+                <h2>عن الدكتور</h2>
+                <p>
+                    د. محجوب الكدكري استشاري جراحة العظام واستبدال المفاصل،
+                    يمتلك خبرة طويلة في علاج أمراض المفاصل والإصابات الرياضية
+                    باستخدام أحدث التقنيات الطبية.
+                </p>
+            </div>
 
-<section id="services" class="services">
-    <h2>الخدمات</h2>
-    <ul>
-        <li>استشارات جراحة العظام</li>
-        <li>استبدال مفصل الورك والركبة</li>
-        <li>علاج الإصابات الرياضية</li>
-        <li>علاج مشاكل العمود الفقري والمفاصل</li>
-    </ul>
-</section>
+            <div class="card">
+                <h2>الخدمات الطبية</h2>
+                <ul>
+                    <li>استبدال مفصل الركبة والورك</li>
+                    <li>جراحة العظام المتقدمة</li>
+                    <li>علاج الإصابات الرياضية</li>
+                    <li>آلام العمود الفقري والمفاصل</li>
+                </ul>
+            </div>
 
-<section id="contact" class="contact">
-    <h2>تواصل معنا</h2>
+            <div class="card">
+                <h2>حجز واستشارة</h2>
+                <form method="POST">
+                    <input type="text" placeholder="الاسم" required>
+                    <input type="email" placeholder="البريد الإلكتروني" required>
+                    <textarea rows="4" placeholder="رسالتك"></textarea>
+                    <button>إرسال</button>
+                </form>
+            </div>
+        </div>
 
-    {% with messages = get_flashed_messages(with_categories=true) %}
-      {% if messages %}
-        {% for category, message in messages %}
-            <div class="flash {{ category }}">{{ message }}</div>
-        {% endfor %}
-      {% endif %}
-    {% endwith %}
+        <!-- صورة الدكتور -->
+        <div>
+            <img src="profile.jpg" class="doctor-img" alt="د. محجوب الكدكري">
+        </div>
 
-    <form action="/" method="POST">
-        <input type="text" name="name" placeholder="الاسم" required>
-        <input type="email" name="email" placeholder="البريد الإلكتروني" required>
-        <textarea name="message" placeholder="رسالتك" rows="5" required></textarea>
-        <button type="submit">إرسال</button>
-    </form>
-</section>
+    </div>
+</div>
 
+<!-- الفوتر -->
 <footer>
-    © 2026 د. محجوب الكدكري - جميع الحقوق محفوظة
+    <div class="footer-inner">
+
+        <div>
+            <h4>عن الدكتور</h4>
+            <p>
+                استشاري جراحة العظام واستبدال المفاصل،
+                يهدف إلى تحسين جودة حياة المرضى.
+            </p>
+        </div>
+
+        <div>
+            <h4>اتصل بنا</h4>
+            <a href="#">📞 966-XXX-XXXX</a>
+            <a href="#">✉ info@mahjoubortho.com</a>
+            <a href="#">📍 العيادة – الرياض</a>
+        </div>
+
+        <div>
+            <h4>روابط سريعة</h4>
+            <a href="#">حجز موعد</a>
+            <a href="#">الخدمات</a>
+            <a href="#">الأسئلة الشائعة</a>
+            <a href="#">سياسة الخصوصية</a>
+        </div>
+
+        <div>
+            <h4>تابعنا</h4>
+            <a href="#">Facebook</a>
+            <a href="#">X (Twitter)</a>
+            <a href="#">Instagram</a>
+            <a href="#">WhatsApp</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 د. محجوب الكدكري – جميع الحقوق محفوظة
+    </div>
 </footer>
 
 </body>
