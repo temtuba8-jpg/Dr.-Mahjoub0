@@ -106,11 +106,12 @@ h2{color:#0b6b3a}
     grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
     gap:15px;
 }
-.videos iframe{
-    width:100%;
-    height:180px;
-    border-radius:8px;
+.videos iframe {
+    width: 100%;
+    aspect-ratio: 16/9; /* يجعل الفيديو يحافظ على النسبة */
+    border-radius: 8px;
 }
+
 
 /* ===== تابعنا ===== */
 .follow{
@@ -159,6 +160,27 @@ footer a:hover{color:#fff}
     padding:12px;
     font-size:13px;
 }
+/* تأثير النبض */
+/* تأثير النبض */
+@keyframes pulse-animation {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.pulse {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    animation: pulse-animation 1.5s infinite;
+    transition: transform 0.3s ease;
+}
+
+.pulse:hover {
+    animation: pulse-animation 0.8s infinite; /* أسرع عند المرور بالماوس */
+}
+
+    
 </style>
 </head>
 
@@ -177,17 +199,23 @@ footer a:hover{color:#fff}
 
 <!-- الهيدر -->
 <header>
-    <div class="header-inner">
-        <div class="logo">د. محجوب الكدكري</div>
-        <nav>
-            <a href="#">الرئيسية</a>
-            <a href="#">عن الدكتور</a>
-            <a href="#">الأخبار</a>
-            <a href="#">الفيديوهات</a>
-            <a href="#">تواصل</a>
-        </nav>
+  <div class="header-inner">
+    <div class="logo pulse">
+      <img src="{{ url_for('static', filename='images/logo.png') }}" 
+           alt="لوجو د. محجوب">
+      د. محجوب الكدكري
     </div>
+
+    <nav>
+      <a href="#">الرئيسية</a>
+      <a href="#">عن الدكتور</a>
+      <a href="#">الأخبار</a>
+      <a href="#">الفيديوهات</a>
+      <a href="#">تواصل</a>
+    </nav>
+  </div>
 </header>
+
 
 <!-- المحتوى -->
 <div class="container">
@@ -218,24 +246,32 @@ footer a:hover{color:#fff}
 </div>
 </div>
 </div>
-
 <div class="card">
-<h2>قسم الفيديوهات</h2>
-<div class="divider"></div>
-<div class="videos">
-<iframe src="https://https://youtu.be/FGu4xW1ea_0?si=gzoyKpzXiCIsswS1&sfnsn=wa"></iframe>
-<iframe src="https://www.youtube.com/embed/VIDEOID2"></iframe>
-<iframe src="https://www.youtube.com/embed/VIDEOID3"></iframe>
-</div>
-</div>
-
-<div class="card">
-<h2>تابعنا</h2>
-<div class="divider"></div>
-<div class="follow">
-<a href="https://www.facebook.com/share/1D78MUv6Zq/?mibextid=wwXIfr" target="_blank">فيسبوك</a>
-<a href="https://wa.me/966550662694" target="_blank">واتساب</a>
-</div>
+  <h2>قسم الفيديوهات</h2>
+  <div class="divider"></div>
+  <div class="videos">
+    <iframe width="560" height="315"
+      src="https://www.youtube.com/embed/BIUR1eixtd0"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen>
+    </iframe>
+    <iframe width="560" height="315"
+      src="https://www.youtube.com/embed/FGu4xW1ea_0"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen>
+    </iframe>
+    <iframe width="560" height="315"
+      src="https://www.youtube.com/embed/3i9zPjGF_lo"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen>
+    </iframe>
+  </div>
 </div>
 
 </div>
@@ -279,7 +315,7 @@ footer a:hover{color:#fff}
 
 <div>
 <h4>تابعنا</h4>
-<a href="https://https://www.facebook.com/share/1D78MUv6Zq/?mibextid=wwXIfr" target="_blank">Facebook</a>
+<a href="https://www.facebook.com/share/1D78MUv6Zq/?mibextid=wwXIfr" target="_blank">Facebook</a>
 <a href="#">X (Twitter)</a>
 <a href="#">Instagram</a>
 <a href="https://wa.me/966550662694" target="_blank">WhatsApp</a>
@@ -294,4 +330,5 @@ footer a:hover{color:#fff}
 
 </body>
 </html>
+
 
