@@ -180,6 +180,33 @@ footer a:hover{color:#fff}
     animation: pulse-animation 0.8s infinite; /* أسرع عند المرور بالماوس */
 }
 
+/* حجم الشعار داخل الهيدر */
+.logo img {
+    height: 50px; /* ارتفاع الشعار */
+    width: auto;  /* يحافظ على نسبة العرض */
+}
+/* صور الأخبار */
+.news img {
+    width: 100%;           /* العرض كامل العمود */
+    height: 250px;         /* ارتفاع ثابت */
+    object-fit: cover;     /* تغطية بدون تشويه */
+    border-radius: 8px;
+    animation: news-pulse 2.5s infinite; /* نبض خفيف مستمر */
+    transition: transform 0.3s ease;
+}
+
+/* تأثير النبض */
+@keyframes news-pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); } /* نبض خفيف */
+    100% { transform: scale(1); }
+}
+
+/* عند مرور الماوس */
+.news img:hover {
+    animation: news-pulse 1s infinite; /* نبض أسرع عند المرور */
+}
+
     
 </style>
 </head>
@@ -198,6 +225,7 @@ footer a:hover{color:#fff}
 </div>
 
 <!-- الهيدر -->
+<!-- الهيدر -->
 <header>
   <div class="header-inner">
     <div class="logo pulse">
@@ -215,8 +243,6 @@ footer a:hover{color:#fff}
     </nav>
   </div>
 </header>
-
-
 <!-- المحتوى -->
 <div class="container">
 <div class="main-grid">
@@ -234,18 +260,19 @@ footer a:hover{color:#fff}
 </div>
 
 <div class="card">
-<h2>قسم الأخبار</h2>
-<div class="divider"></div>
-<div class="news">
-<img src="https://via.placeholder.com/400x250">
-<div>
-<h3>نجاح عملية استبدال مفصل</h3>
-<p>
-نجاح عملية استبدال مفصل باستخدام أحدث التقنيات الطبية.
-</p>
+  <h2>قسم الأخبار</h2>
+  <div class="divider"></div>
+  <div class="news">
+    <img src="{{ url_for('static', filename='images/news1.jpg') }}" alt="خبر">
+    <div>
+      <h3>نجاح عملية استبدال مفصل</h3>
+      <p>
+        نجاح عملية استبدال مفصل باستخدام أحدث التقنيات الطبية.
+      </p>
+    </div>
+  </div>
 </div>
-</div>
-</div>
+
 <div class="card">
   <h2>قسم الفيديوهات</h2>
   <div class="divider"></div>
@@ -330,5 +357,6 @@ footer a:hover{color:#fff}
 
 </body>
 </html>
+
 
 
